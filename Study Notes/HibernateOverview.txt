@@ -1,0 +1,27 @@
+Hibernate Overview
+
+What is Hibernate?
+	Hibernate ORM is an object-relational mapping tool for the Java programming language
+		ORM in computer science is a programming technique for converting data between incompatible type systems in object-oriented programming languages
+		Incompatible Type Example
+		Object in Java
+		Object stored in Database
+		
+		Bigger Picture
+		Java Object interact thru Hibernate to Database
+		
+		Benefits
+			1. Hibernate is database independent
+			2. Handles low level SQL for you
+			3. Minimizes JDBC related code in your App.
+			
+		Example ORM in Action
+			
+		Session Factory
+			-Session Factory creates session objects
+			-SessionFactory is heavyweight object so usually it is created during application start up and used later
+		
+		Session	
+			-A session is used to get a physical connection with a database.
+			-The session object is lightweight and short lived object
+			-Not thread safe

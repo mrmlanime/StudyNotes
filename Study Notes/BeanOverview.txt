@@ -1,0 +1,22 @@
+What is Bean? Bag of Objects called container where you can call them anytime
+Bean Scope
+singleton - scopes a single bean definition to a single object instance per Spring IoC container
+prototype = scopes a single bean definition to any number of object instances
+request - scopes a single bean definition to the lifecycle of a single HTTP request; i.e. eac and every HTT request will have its own i
+instance of a bean created off the back of single definition. Only valid in the context of a web-aware Spring Application Context
+session - scopes a single bean deifnition to the lifecyle of a HTTP session. Only valid in the context of a web-ware Spring Application Context
+
+
+steps of bean
+instantiantion
+populate properites
+sets the bean name
+sets the bean factory
+pre-initialization set's property of the bean
+initializing bean
+call custom init-method
+post-initializing bean
+bean ready for use
+
+destroy bean
+call custom of destroy-method

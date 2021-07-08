@@ -1,0 +1,67 @@
+Problems
+Runtime Errors - due to lack of knowledge on documentation of several dependencies. Long term solution should read and must know the fundamentals 
+of each basic dependencies and libraries
+
+Agile Method vs SDLC Soft Development Life Cycle
+Agile
+	- Small chunks development
+	- Concept - Distrbute and Conquer, Divide and Rule, Divide tasks and implement and deploy it
+
+Agile Manifesto
+
+Scrum - Based on repititon
+	- Team
+		- Product Owner - Major responsible
+			- Responsible of Product Success
+			- Customers, Team, Users and Stakeholders
+			- Identify backlogs
+			- Priotize work flow
+			- Optimize process
+		- Srum Master - Responsible of the team
+			- Manages the process
+			- provides process related information to the team
+			- Keep process on track
+		- Development Team
+			- Does the work
+			- Interact with the product owner every sprint (task timeframe)
+			- Team manages: Development, testing and production
+PROCESS
+		Sprint - timeframe with multiple categories
+		Sprint planning
+			- plan entire the sprint, What can and will be , feasibility, 
+			TIME BOX  - 1 month or less, decided by the project management
+				- Sprint duration is based on time box
+				- Every sprint delivers working product
+		Daily Scrum 
+			- Short daily meeting
+			- What to do today
+			- What was done yesterday
+			- any obstruction
+			- Typical in the morning
+			- Team progress calculated 
+			- pending work calculated
+			- commitments are decided for the day
+			Obstruction - Scrum Master decided or solve  
+		Sprint Review
+			- What's achieved
+			- Demostrate newwest created product to stake holders
+			- What issues were faced
+			- How they were overcome
+			- What went well
+			- PRoducti owner discuss backlogs, completion and discussion on future sprint
+	
+		Sprint Retrospective
+			- Prior to the next sprint planning
+			- 3 - 4 hour meeting
+			- what went well in the sprint
+			- what could be improved
+			- what will we commit to improve the next sprint
+
+
+
+JUNIT testing
+	Jupiter - JUnut 5 tests-
+	Old Tests - vintage
+	3rd party - Custom Tests
+	- Platform 
+

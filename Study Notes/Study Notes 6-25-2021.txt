@@ -1,0 +1,191 @@
+Spring
+
+is actually component based programming
+in which the spring controls the creation of clas instances based on our instructions on communicating between several components
+By using annotation using bean, creating a superclass as interface
+
+We can dynamically get an object from bean factory using dependency injection
+
+
+Web Services
+
+2 Types
+SOAP - Jax-ws (Java API for XML - Web Services)
+Simple Object Access Protocol - Older Version
+
+REST - Jax-rs (Java API - RESTful Web Services)
+Representational State Transfer - Newer Version, Lightweight
+
+Web Service - service available on network and uses a standardize messaging system, machine level consumption services
+Standard Appplication - multiple services inside the shell interact with client
+if service is independent is called microservices
+web services - collection of services provided in the network
+
+website - for human consumption
+webservice - for machine consumption, standardize messaging, data can be anything for older version is xml for newer will be json, xml interact with API
+
+Resource based Uris
+/Brands/brandname
+/Bikes
+/Bikes/honda
+/Spares/suzuki
+/Spare/25
+
+actions based on http methods
+GET - query
+POST - add
+PUT - update
+DELETE - remove
+
+Status Codes
+200 - Ok
+404 - Not Found
+500 - Internal Server Error
+ 
+1xxx - informational type message
+2xxx - Successful message update
+3xxx - Redirection message
+4xxx - Client Error
+5xxx - Server Error
+
+File Based Links
+	- Static Pages
+	
+Resource Based Links
+	- Dynamic Links/Pages
+	Travel.com/cities/cityID
+	 cities is plural form, hmmm
+
+Collection URI - used plural forms
+	Travel.com/cities
+	
+Filter Based URI - 
+	Travel.com/cities/startswith=m
+	Travelco,com/cities/offset=25&startswith=m
+	
+URI relationships
+	Travel.com/countries/philippines/cities
+	
+URI must be based on relationship and planned architecture
+	
+HTTP Status Codes	
+1xx - Recieved and for processing
+100 Continue - Continue, the server has received the content type and proceed for processing the request
+102 Processing - Server received the request the processing is ongoing
+
+2xx - Sucessfully received understood and accepted the request
+200 OK - std response for successful http request
+201 Created - Request fulfilled and resource created
+
+3xx - Further action needs to be taken in order to complete the request
+301 Moved Permanently - all future request should be redirected to the given URI
+304 Not Modified - Indicates that the resource has been modified since the version specified by the request headers
+				- Last action information
+				
+4xx - Client error contains bad syntax or cannot be fulfilled
+403 Forbidden - request was valid but the server is refusing action
+404 Not Found - requested resource could not be found but may be available in the future
+
+5xx - Server failed and fulfill valid request
+500 Internal Server Error - Generic server error message
+503 Service Unavailable - Server is currently unavailable
+
+
+Possible Status Codes for CRUD
+READ - Successful/Not Found/Failure  GET - 200ok, 404 Not Found, 500 Internal Server Error
+DELETE - do - 						 DELETE - 200ok/204 - No Content, 404 - Not Found, 500 - Internal Server Error
+CREATE - do - 						 POST - 201 Created, 400 - Bad Request, 500 - Internal Server Error
+UPDATE - do - + Data Error 			 PUT  - 200 ok , 400 Bad Request, 404 Not Found, 500 Internal Server Error
+ 
+ 
+Idempotence of HTTP Methods
+	Idempotence - GET - Read - Read - Safe/Repeatable, 
+				  DELET - Delete - Write - Safe/Repeatable
+				  , PUT - Update - Write - Safe/Repeatable, 
+				  POST - Create - Write - Non-repeatable since needed additional resources, not safe
+				  
+				  Idempotent - method safe and repeatable, non-dempotent - method not safe/non=-repeatable
+				  
+	Hypermedia as the engine of the Application State (HATEOAS)
+		Hypermedia - response that contains links to other blocks of media including text, audio, video and images/graphics
+				 - inspired from hypertext
+				 - links no service speficiaiton required, no documentation to use website
+		Hypertext - text contains links of blocks of text
+
+		
+	SOAP - service speficiation is required, WSDL needed for SOAP Applicaiton,
+	
+	REST - No needed service speficiation/documentation i.e. it is optional
+		/users - getall users
+		/users/1 - get sepecific users
+	
+	Only self links
+	Issue only self links, not convenient, not solving purpose, not implementing HATEOAS
+	{
+		id:100
+		name: John
+		href: /users/1
+	}
+	
+	HATEOAS Implementation
+	{
+		id:100
+		name: John
+		self: /user/1
+		employeer: /users/1/employer,
+		contact: /users/1/contact
+		projects: /employees/empID/projects
+	}
+	It is quite messy
+	Links must be handled with as Collection, we can have response within a response
+	
+	{
+		id: 1,
+		name: john,
+		links:][{
+			rel:self,
+			href: /users/1
+			},{
+			rel: employer,
+			href: /users/1/employer
+			},{
+			rel:contact,
+			href: /users/1/contact
+			},
+			{
+			rel:projects,
+			href:/employers/empId/projects
+			}]
+		}
+	}		
+	
+href = anchor tags of html	
+Links based on requirement of client and server
+
+Richard Maturity Model
+Level 0 - API Not Restful - Not uses of any URI, HTTP methos and HATEOAS Capabilities
+Single URI and Single Http - single http method, transfers SOAP-based payloads
+Uses plain old xml - POX
+Actions in inside the request body
+example: http://showroom/manage - messy type of APIs
+
+Level 1 - Mutliple URI and Single Verb
+Makes use of URIs based on resource /cars, /brands, /employees/empID/projects
+Single HTTP verb, usually POST, specific action based on the request
+doesn't make HTTP methods for action based scenarios
+
+Leve 2 - Multiple URI, multiple Verbs
+Makes use URIs based on resource
+/cars, /brands, /employees/empID/projects
+Create, Read, Update, Delete RUD services
+handled by HTTP methods
+
+Level 3 - URI/Http/HATEOAS
+Make use of URIs based on resource
+HTTP methods action based
+Responses are self-explanatory by using the HATEOAS		
+
+Practical Feasible and Restful APIs, create based on the architecture only, aggreement between server and client
+JAX -RS specificaitons set of annotations and interfaces to build RESTful API, different labels for implementation
+Applicaiton - JAX-RS (The specifications are here)- Implementation, would be implemented by 3rd party , Apache CXF, Jersey, RESTeasy, Restlet, etc , Jersey and RESTEsasy are the most popular
+		JAX-RS have implementations along with speficific vendor, provided that JAX-RS version is compatibile with the implementation

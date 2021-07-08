@@ -1,0 +1,18 @@
+Hi Sir Kirby,
+ 
+What did you accomplish since last meeting? 
+
+Partially covered Spring boot microservices development. Reviewed with my past projects and how to migrate it to Spring or MVC Maven project. 
+
+What did you accomplish today? 
+
+Reviewed o Spring boot microservices and RESTful API development. Reviewed again with front-end libraries and started to explore Angular JS framework. Starting to review JUnit testing and Spring project management scenarios. 
+
+What is impeding you from working most effectively? 
+
+1. Travel Issue: Need to prepare my travel going to Cebu as preparation for family relocation to Cebu. 
+2. Internet Issue: Instability of internet connection recently. Possible solution: Use at least 2 ISP, (Globe and Smart) in case one of the ISPs has connection issues.
+
+Regards,
+
+Mark

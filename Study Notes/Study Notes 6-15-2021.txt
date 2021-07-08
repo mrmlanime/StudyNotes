@@ -1,0 +1,18 @@
+Lifecycle of Servlet
+Load an class of Servlet
+Create an instance of the Servlet
+execute the init (initialize the parameters)
+execute the service method for the specified request of the client
+execute the destroy nethod for garbage collector or returning the resources in server side
+
+Scripting elemts
+Expression > <%= Expression returning value, one statement %> <%= (x>y)&&(x>0)?True:False %>
+Scriplet <% scriplets with multiple Java statements %> <% int x = 0; x = 1 + 3; out.println(x); %>
+Declaration <%! Declaration statement %> <% public int count = 0; %>
+Directive <%@ Directive %> <%@ page.... %>
+Comment <%-- comment --%> <%-- JSP Comment --%>
+
+
+Java Directive (JSP) -> provides information for the webpage including the language, contentType, charset, pageEncoding
+
+
