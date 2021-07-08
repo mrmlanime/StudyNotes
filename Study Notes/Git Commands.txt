@@ -1,0 +1,20 @@
+
+//Set this configuration before commit
+git config --global user.email
+git config --global user.name
+
+git init - create a local repo
+git status - check if there are changes that haven't tracked yet and added on staging area
+git add "Filename" - Adding file to the staging area ready for commit
+git commit -m "Commit Message" - created a commit or restore point on the current branch
+git checkout -b "New Branch" - For versioning, creating new branch if there is new updates and automatically changes from
+	current branch to the new branch
+Note: -b means create so if you want to switch from other branch please drop the -b
+
+git branch - checking out all branches on the current repo
+usually primary is another synonym for master
+
+git remoted add origin <URI> - Registering and adding the remote Repo to your local git
+
+
+
