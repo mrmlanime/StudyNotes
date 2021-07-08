@@ -16,5 +16,8 @@ usually primary is another synonym for master
 
 git remoted add origin <URI> - Registering and adding the remote Repo to your local git
 
+git push -u origin <branch name> - push and save the recent commited in selected branch to the remote
+
+
 
 

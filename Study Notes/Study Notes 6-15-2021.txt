@@ -15,4 +15,8 @@ Comment <%-- comment --%> <%-- JSP Comment --%>
 
 Java Directive (JSP) -> provides information for the webpage including the language, contentType, charset, pageEncoding
 
+JSP don't forget to include the in classpath the JSP jar and API-tomcat
+
+Hello
+
 
